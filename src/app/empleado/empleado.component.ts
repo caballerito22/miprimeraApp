@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-empleado',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './empleado.component.html',
   //template:"<p>Aquí iría un empleado</p>",
   styleUrl: './empleado.component.css'
@@ -18,7 +19,11 @@ export class EmpleadoComponent implements OnInit{
 
   edad=19;
 
-  //empresa="Proyecto Lorena"
+  empresa="IES Benigasló";
+
+  /*cambiarEmpresa(event:Event){
+    this.empresa=(<HTMLInputElement>event.target).value;
+  }*/
 
   /*getEdad(){return this.edad}*/
 
