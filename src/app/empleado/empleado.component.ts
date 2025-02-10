@@ -18,10 +18,31 @@ export class EmpleadoComponent implements OnInit{
 
   edad=19;
 
-  empresa="Proyecto Lorena"
+  //empresa="Proyecto Lorena"
 
   /*getEdad(){return this.edad}*/
 
+  /*llamaEmpresa(value:String){}*/
+
+  habilitacionCuadro=true;
+
+  usuRegistrado=false;
+
+  textoDeRegistro="No hay nadie registrado";
+
+  getRegistroUsuario(){
+    this.usuRegistrado=false;
+  }
+
+  setusuarioRegistrado(event:Event){
+    //alert("El usuario se acaba de registrar")
+    //this.textoDeRegistro="El usuario se acaba de registrar";
+    if((<HTMLInputElement>event.target).value=="si"){
+      this.textoDeRegistro="El usuario se acaba de registrar";
+    }else{
+      this.textoDeRegistro="No hay nadie registrado";
+    }
+  }
 
   ngOnInit(): void {
     
