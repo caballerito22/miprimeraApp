@@ -19,7 +19,9 @@ export class EmpleadoComponent implements OnInit{
 
   edad=19;
 
-  empresa="IES Benigasló";
+  direccion = "";  
+  empresa = "IES Benigasló"; 
+  nacionalidad = "";
 
   /*cambiarEmpresa(event:Event){
     this.empresa=(<HTMLInputElement>event.target).value;
