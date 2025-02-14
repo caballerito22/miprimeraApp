@@ -40,6 +40,11 @@ export class EmpleadoComponent implements OnInit{
   getRegistroUsuario(){
     this.usuRegistrado=false;
   }
+  habilitarCuadro: boolean = false;
+
+  cambiarEmpresa(event: Event): void {
+    this.empresa = (<HTMLInputElement>event.target).value;
+  }
 
   setusuarioRegistrado(event:Event){
     //alert("El usuario se acaba de registrar")
