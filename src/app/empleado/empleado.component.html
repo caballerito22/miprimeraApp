@@ -1,3 +1,4 @@
+<!-- Interpolación: Muestra el valor de la variable "nombre" en el HTML -->
 <p>Nombre del empleado:{{nombre}}</p>
 <p>Apellido del empleado:{{apellido}}</p>
 
@@ -6,12 +7,15 @@
 <p>Dirección del empleado: {{direccion.value}}</p>
 Introduce la dirección del empleado: <input type="text" #direccion (keyup)="0" [disabled]="habilitarCuadro">
     
+<!-- FORMA -> Property Binding: Deshabilita el input si habilitarCuadro es true -->
+
 <p>Empresa del empleado:{{empresa}}</p>
 Introduce la empresa del empleado: <input type="text"(input)="cambiarEmpresa($event)">
 
 <!--Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">-->
 
 
+<!-- FORMA -> Bidireccional Binding (Two-Way Data Binding): Sincroniza la variable "nacionalidad" con el input -->
 <p>Nacionalidad del empleado: {{nacionalidad}}</p>
 Introduce la Nacionalidad del empleado: <input type="text" id="nacionalidad" [(ngModel)]="nacionalidad">
 
